@@ -26,6 +26,8 @@ public with sharing class CalloutController {
         cw.toNumber = '';
         cw.custom = false;
 
+        Id jobId = System.enqueueJob(new TwilioCalloutQueueable(cw));
+
 
     }
 

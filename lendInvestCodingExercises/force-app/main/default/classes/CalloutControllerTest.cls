@@ -1,3 +1,8 @@
+/*
+ * @Author: Billy Cavanagh
+ * Date: 13.12.2022
+ * Purpose: Test class for Callout Controller and Twilio Callout Queueable.
+ */
 @isTest
 public with sharing class CalloutControllerTest {
     
@@ -12,13 +17,14 @@ public with sharing class CalloutControllerTest {
             String fullJson = 'testJsonResponse';
 
             HTTPResponse res = new HTTPResponse();
-            res.setHeader('Content-Type', 'text/json');
+            res.setHeader('Content-Type', 'application/json');
             res.setBody(fullJson);
             res.setStatusCode(200);
             return res;
         }
     }
 
+    // Test method
     @isTest
     public static void testClassification() {
 
