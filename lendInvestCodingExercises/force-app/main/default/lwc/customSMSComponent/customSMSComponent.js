@@ -26,7 +26,7 @@ export default class CustomSMSComponent extends LightningElement {
         return (this.smsBody.length === 0);
     }
 
-    handleClick(event) {
+    handleClick() {
 
         this.accounts.push(this.recordId);
 

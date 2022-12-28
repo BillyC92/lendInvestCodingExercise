@@ -1,12 +1,12 @@
 <template>
-    <lightning-card title="Send Custom SMS message" custom-icon="custom:icon13">
+    <lightning-card title="Send Custom SMS message">
         <div class="slds slds-p-horizontal--medium">
             <div class="slds-grid slds-wrap">
                 <div class="slds-col slds-size_12-of-12">
                     <lightning-textarea name="smsBodyField" data-name="messageInput" label="Please type your SMS message to be sent" value={smsBody} placeholder="Please type here..." onchange={handleChange} required="true"></lightning-textarea>                
                 </div>
                 <div class="slds-col slds-size_6-of-12 ">                 
-                    <lightning-button disabled={disabled} label="Send Message" size="small" variant="brand" onclick={handleClick}></lightning-button>
+                    <lightning-button disabled={disabled} label="Send Message" variant="brand" onclick={handleClick}></lightning-button>
                 </div>
             </div>
         </div>

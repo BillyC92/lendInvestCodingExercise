@@ -62,12 +62,8 @@ public with sharing class TwilioCalloutQueueable implements Queueable, Database.
  
             HTTPResponse res = postMessageToTwilio(callWrap);
 
-            if(res.getStatusCode() == 201) {
-                System.debug('Message sent');
-            } else {
-                System.debug('Message not sent');
-                //TODO : 
-            }
+            //TODO : Add error handling if the Status code returned is not 201
+
         }        
         
     }
