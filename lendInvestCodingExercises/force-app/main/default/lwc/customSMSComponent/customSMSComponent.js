@@ -1,4 +1,4 @@
-import { LightningElement, api, wire, track } from 'lwc';
+import { LightningElement, api, wire} from 'lwc';
 import sendMessage from '@salesforce/apex/CalloutController.callQueueableFromLWC';
 import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
 import PHONE_FIELD from '@salesforce/schema/Account.Phone';
@@ -47,7 +47,7 @@ export default class CustomSMSComponent extends LightningElement {
                 
                 const event = new ShowToastEvent({
                     title: 'Error',
-                    message: 'The message has not been delivered. Please try again',
+                    message: error.body.message,
                     variant: 'error',
                 });
                 this.dispatchEvent(event);
@@ -56,7 +56,7 @@ export default class CustomSMSComponent extends LightningElement {
             const event = new ShowToastEvent({
                 title: 'Error',
                 message: 'Please ensure the phone number field is populated on the Account',
-                //message: reduceErrors(error),
+                
                 variant: 'error',
             });
             this.dispatchEvent(event);
