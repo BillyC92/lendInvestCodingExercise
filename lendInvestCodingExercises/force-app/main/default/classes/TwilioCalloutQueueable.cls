@@ -82,6 +82,7 @@ public with sharing class TwilioCalloutQueueable implements Queueable, Database.
         req.setHeader('Accept-Charset', 'utf-8');
         req.setHeader('Authorization', 'Basic '+EncodingUtil.base64Encode(rw.credentials));
 
+        // TODO : Update From number to be another custom setting rather than hardcoded
         req.setBody('To=' + EncodingUtil.urlEncode(rw.toNumber, 'UTF-8') + '&From=' + EncodingUtil.urlEncode('+44 7862 128659','UTF-8') + '&Body=' + rw.smsMessageBody);
         res = http.send(req);
 

@@ -40,6 +40,7 @@ export default class CustomSMSComponent extends LightningElement {
                 });
                 this.dispatchEvent(event);
 
+                //TODO : Disable button after input is reset
                 this.handleResetInput();
 
             }).catch(error=>{
